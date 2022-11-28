@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 21-11-2022 a las 16:45:18
+-- Tiempo de generación: 28-11-2022 a las 10:02:38
 -- Versión del servidor: 10.3.34-MariaDB-0ubuntu0.20.04.1
 -- Versión de PHP: 7.4.3
 
@@ -49,7 +49,8 @@ INSERT INTO `articulos` (`id`, `idcategoria`, `codigo`, `nombre`, `precio_venta`
 (1, 1, '00245', 'loguitech', '20.00', 500, 'teclado model km90', 1, NULL, NULL),
 (2, 3, 'MN-P78', 'placa asus', '250.00', 500, 'placas standar', 1, '2018-09-08 02:44:29', '2018-09-08 02:44:29'),
 (3, 2, 'CMYK-45-10', 'GL Monitor de 4k', '1500.00', 500, 'monitor de alta resolucion', 1, '2018-09-08 02:45:13', '2018-09-08 02:45:13'),
-(4, 1, '12356', 'Teclado TEC-01', '30.00', 10, 'Teclado mecánico', 1, '2022-11-17 00:45:10', '2022-11-17 00:45:10');
+(4, 1, '12356', 'Teclado TEC-01', '30.00', 10, 'Teclado mecánico', 1, '2022-11-17 00:45:10', '2022-11-22 23:03:06'),
+(5, 7, '0012', 'Producto 1.2', '12.00', 32, 'prueba', 1, '2022-11-23 14:42:26', '2022-11-23 14:49:43');
 
 -- --------------------------------------------------------
 
@@ -76,7 +77,8 @@ INSERT INTO `categorias` (`id`, `nombre`, `descripcion`, `condicion`, `created_a
 (3, 'MotherBoards', 'placas madre gamers', 1, '2018-09-08 02:43:55', '2018-09-08 02:43:55'),
 (4, 'Laptops', 'laptops de marca Hp, Lenovo, Asus, Acer, Toshiba, Dell', 1, '2018-09-10 22:23:16', '2018-09-10 22:23:16'),
 (5, 'Fundas', 'fundas de laptop, impresoras y pc', 1, '2018-09-10 22:23:50', '2018-09-10 22:23:50'),
-(6, 'Prueba', 'Categoria de prueba', 1, '2022-11-21 16:13:46', '2022-11-21 16:13:46');
+(6, 'Prueba', 'Categoria de prueba', 1, '2022-11-21 16:13:46', '2022-11-23 14:38:45'),
+(7, 'Cat 1', 'prueba', 1, '2022-11-23 14:40:27', '2022-11-23 14:40:27');
 
 -- --------------------------------------------------------
 
@@ -335,7 +337,8 @@ INSERT INTO `personas` (`id`, `nombre`, `tipo_documento`, `num_documento`, `dire
 (6, 'Maximo', 'DNI', '30662512', 'Av la marina 120', '221155', 'maximo@gmail.com', '2018-09-07 21:20:16', '2018-09-07 21:20:16'),
 (7, 'ITD tecnology', 'RUC', '20548452584', 'Calle Octavio Muñoz Najar 215', '354896', 'itd@gmail.com', '2018-09-07 23:20:08', '2018-09-07 23:20:08'),
 (10, 'Javi', 'DNI', '0234', 'Mi casa', '61297848', 'javier19coc@gmail.com', '2022-11-17 01:03:30', '2022-11-21 17:16:28'),
-(11, 'Javier Cornejo', 'DNI', '123456', 'Su casa', '12345678', 'javier@gmail.com', '2022-11-21 16:26:24', '2022-11-21 16:26:24');
+(11, 'Javier Cornejo', 'DNI', '123456', 'Su casa', '12345678', 'javier@gmail.com', '2022-11-21 16:26:24', '2022-11-21 16:26:24'),
+(12, 'Prueba de clase', 'DNI', '00001', 'Su casa', '12345678', 'prueba12@gmail.com', '2022-11-23 14:40:10', '2022-11-23 14:40:10');
 
 -- --------------------------------------------------------
 
@@ -355,7 +358,8 @@ CREATE TABLE `proveedores` (
 
 INSERT INTO `proveedores` (`id`, `contacto`, `telefono_contacto`) VALUES
 (3, 'Martin quiñones', '584721'),
-(7, 'Daniela Chamuco', '452512');
+(7, 'Daniela Chamuco', '452512'),
+(12, 'Proveedor1', '12345679');
 
 -- --------------------------------------------------------
 
@@ -399,8 +403,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `usuario`, `password`, `condicion`, `idrol`, `remember_token`) VALUES
-(1, 'admin', '$2y$12$fQVExSFUFZCNs.9xClllau9VAWQGMJZq7KNTQ14DgpO2djOIiEeVi', 1, 1, 'jcom3qVVaoGaX36ksdlysOfdYkifOP3VKwrRbPQ6wfbJvWaGnEkxJlT7C2rK'),
-(11, 'almacen', '$2y$10$iUqnoug/pe6Te1g3yxB3T.amwJCK2fkMU31GCn2MQXkZEPHMtMc7C', 1, 3, 'N8vea6FO3Ckh5QfvbV1MijL69nRK5nLrTjY32pOWxTiFgU2WqaZA1uFfd07g'),
+(1, 'admin', '$2y$12$fQVExSFUFZCNs.9xClllau9VAWQGMJZq7KNTQ14DgpO2djOIiEeVi', 1, 1, '2RBt1hGT11SLFCkpJjEU1zQyiWSLxkDYiNXbVSn8rn4kzWZLC2hX4dkjfeMN'),
+(11, 'almacen', '$2y$10$iUqnoug/pe6Te1g3yxB3T.amwJCK2fkMU31GCn2MQXkZEPHMtMc7C', 1, 3, '891ZwwI9HP4VOJ5fzW5l2x7hcSXepar9R6RDyKGTz9Qi7mbRnF0PyRwjPtYn'),
 (10, 'Javi', '$2y$10$ZVRmxxSAbArw54IaOjqRhuMuGPyioSygEuU.oJiiTlbd4tJZ4fq5i', 1, 1, NULL),
 (5, 'jose', '$2y$10$/NCWJJ9aD60bi.KG/Nu4seGwesgiisIKb1k6eVHyM7mldYTyNfm8u', 0, 3, ''),
 (6, 'vendor', '$2y$10$je7PgZIf5zKqazTxMqXY/.WnThVmBARKM/IWiLO8i4oBoiZPy2wBS', 1, 2, 'dOjsBEdXJAkw4wFFX0K4IT537yMroeFGp2DA0Qu8XucvYYub8Z5sBB052rD8');
@@ -561,13 +565,13 @@ ALTER TABLE `ventas`
 -- AUTO_INCREMENT de la tabla `articulos`
 --
 ALTER TABLE `articulos`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `categorias`
 --
 ALTER TABLE `categorias`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de la tabla `detalle_ingresos`
@@ -597,7 +601,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT de la tabla `personas`
 --
 ALTER TABLE `personas`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT de la tabla `roles`
